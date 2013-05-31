@@ -1,0 +1,134 @@
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Romanesco|Raleway);
+@font-face {
+  font-family: "Entypo";
+  src: url("/css/entypo/entypo.eot");
+  src: url("/css/entypo/entypo.eot") format('eot'), url("/css/entypo/entypo.woff") format('woff'), url("/css/entypo/entypo.ttf") format('truetype'); }
+
+$cursive-font: 'Romanesco', cursive;
+$body-font: 'Raleway', sans-serif;
+$black: #141414;
+$white: #f6f6f6;
+$purple: #370B3B;
+$lilac: #7069B2;
+$sky: #47A0AB;
+$acapulco: #89B2A1;
+$brown: #362000;
+
+h1 {font-family: $cursive-font; font-size: 40px;}
+i {font-family: 'Entypo'; font-size: 60px; font-weight: normal; font-style: normal;
+  &.anchor, &.final {width: 100%; text-align: center; margin: 0; padding: 20px 0 0 0; display: block; color: $black;}
+  &.final {position: absolute; bottom: 20px; padding: 0;}
+}
+iframe {margin-top: 40px;}
+
+body {
+  font-family: $body-font; width: 100%; padding: 0; margin: 0; font-size: 16px; background-color: $white;
+  @include background-size(cover);
+}
+.centered {width: 960px; margin: 0 auto; padding: 0;}
+
+header {
+  background-color: $black; height: 50px; position: fixed; width: 100%; z-index: 100;
+  @include box-shadow(rgba(black, 0.3) 0 2px 10px);
+  @include transition(all 0.4s linear translate3d(0, 0, 0));
+  ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
+    li { float: left; width: 150px; text-align: center;
+      a { color: $white; text-decoration: none; height: 50px; width: 150px; line-height: 55px; float: left; @include transition(all 0.2s linear); font-size: 16px;}
+      a.logo {font-family: $cursive-font; font-size: 30px; line-height: 50px;
+        &:hover {color: $lilac};
+        &.current {color: $lilac;}
+      }
+      &.current { background: url("/img/current_indicator.png") top left no-repeat;
+        a {color: $lilac;}
+      }
+      &:hover {
+        a {color: $lilac;}
+      }
+    }
+  }
+}
+
+div#banner {
+  width: 100%; height: 220px; padding: 60px 0 0 0; margin: 0;
+
+  h1, h2 {margin: 0; padding: 0; width: 100%; text-align: center;}
+  h1 {margin-top: 60px;}
+}
+
+div#waimea {
+  width: 100%; height: 300px; padding: 0; margin: 0;
+  background: url("/img/waimea.jpg") no-repeat center center fixed;
+  background-size: cover;
+  @include box-shadow(rgba(black, 0.3) 0 2px 2px);
+}
+
+div#us {
+  .centered { padding: 80px 0 0 0; height: 2050px; position: relative;
+    .josh, .justin {float: left; width: 46%; padding: 0 2%;
+      img {height: 375px; width: 400px; margin: 0 auto; display: block;}
+      h1 {text-align: center;}
+    }
+    img {border-radius: 10px; margin-top: 50px;}
+    #plus {position: absolute; top: 423px; left: 466px; font-size: 60px;}
+  }
+}
+
+div#salvatores {
+  width: 100%; height: 300px; padding: 0; margin: 0;
+  background: url("/img/beach.jpg") no-repeat center center fixed;
+  background-size: cover;
+  @include box-shadow(rgba(black, 0.3) 0 2px 2px);
+}
+
+div#venue {
+  .centered {height: 980px; position: relative; padding: 40px 0 0 0;
+    h1 {text-align: center;}
+  }
+}
+
+div#indigo {
+  width: 100%; height: 300px; padding: 0; margin: 0;
+  background: url("/img/fog.jpg") no-repeat center center fixed;
+  background-size: cover;
+  @include box-shadow(rgba(black, 0.3) 0 2px 2px);
+}
+
+div#reservations {
+  .centered {height: 1100px; position: relative; padding: 40px 0 0 0;
+    h1 {text-align: center;}
+  }
+}
+
+div#wedding {
+  width: 100%; height: 300px; padding: 0; margin: 0;
+  background: url("/img/cave.jpg") no-repeat center center fixed;
+  background-size: cover;
+  @include box-shadow(rgba(black, 0.3) 0 2px 2px);
+  i {color: $white;}
+}
+
+div#rsvp {
+  .centered {height: 780px; position: relative; padding: 40px 0 0 0;
+    h1 {text-align: center;}
+    img {width: 664px; height: 357px; margin: 40px auto 0 auto; display: block; border-radius: 10px;}
+  }
+}
+
+footer {
+  width: 100%; background-color: $black; height: 50px;
+  ul { height: 100%; list-style-type: none; float: left; clear: both; margin: 0; padding: 0; width: 100%;
+    li { float: left; width: 50%;
+      &:first-of-type {text-align: left;}
+      &:last-of-type {text-align: right;}
+      a { color: $white; text-decoration: none; height: 50px; width: 100%; line-height: 55px; float: left; @include transition(all 0.2s linear); font-size: 16px;}
+      a.logo {font-family: $cursive-font; font-size: 30px; line-height: 50px;
+        &:hover {color: $lilac};
+        &.current {color: $lilac;}
+      }
+      &:hover {
+        a {color: $lilac;}
+      }
+    }
+  }
+}

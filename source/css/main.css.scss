@@ -46,6 +46,24 @@ header {
         a {color: $lilac;}
       }
     }
+    li.button {float: right;
+      a {
+        width: 100%; text-align: center; color: white; height: 40px; line-height: 42px; font-weight: normal;
+        @include background(linear-gradient(lighten($lilac, 5), $lilac 70%));
+        @include border-radius(2px);
+        @include box-shadow(inset lighten($lilac, 20) 0 1px 1px);
+        @include text-shadow(darken($lilac, 10) 0 -1px 0);
+        @include transition(all 0s linear);
+        border: 1px solid darken($lilac, 20); margin: 4px 0 0 0;
+        &:hover {
+          @include background(linear-gradient(lighten($lilac, 8), lighten($lilac, 3) 70%));
+        };
+        &:active {
+          @include background(linear-gradient($lilac, darken($lilac, 10) 70%));
+          @include box-shadow(inset darken($lilac, 20) 0 1px 1px);
+        };
+      }
+    }
   }
 }
 
@@ -89,9 +107,10 @@ div#venue {
 
 div#indigo {
   width: 100%; height: 300px; padding: 0; margin: 0; min-width: 960px;
-  background: url("/img/rainbow.jpg") no-repeat center center fixed;
+  background: url("/img/cave.jpg") no-repeat center center fixed;
   background-size: cover;
   @include box-shadow(rgba(black, 0.3) 0 2px 2px);
+  i {color: $white;}
 }
 
 div#reservations {
@@ -102,14 +121,13 @@ div#reservations {
 
 div#wedding {
   width: 100%; height: 300px; padding: 0; margin: 0; min-width: 960px;
-  background: url("/img/cave.jpg") no-repeat center center fixed;
+  background: url("/img/rainbow.jpg") no-repeat center center fixed;
   background-size: cover;
   @include box-shadow(rgba(black, 0.3) 0 2px 2px);
-  i {color: $white;}
 }
 
-div#rsvp {
-  .centered {height: 780px; position: relative; padding: 40px 0 0 0;
+div#registry {
+  .centered {height: 600px; position: relative; padding: 40px 0 0 0;
     h1 {text-align: center;}
     img {width: 664px; height: 357px; margin: 40px auto 0 auto; display: block; border-radius: 10px;}
   }
